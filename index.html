@@ -1,267 +1,192 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alderen is building Ansel, an AI system for engineering that combines machine-learning models with agents to coordinate simulation-driven workflows, with full analysis and engineering verification as the final check.">
+    <meta name="theme-color" content="#14191E">
+    <title>Alderen | Ansel, an AI system for engineering</title>
 
-    <meta
-        name="description"
-        content="Alderen is exploring intelligent engineering workflows to help engineers work more effectively with simulation-driven design."
-    >
-
-    <meta name="theme-color" content="#20272D">
-
-    <title>Alderen | Engineering Intelligence</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/styles.css">
     <script src="static/js/main.js" defer></script>
 </head>
 
 <body>
-
-    <!-- Header -->
     <header class="site-header">
         <div class="container header-inner">
-
             <a class="brand" href="#home" aria-label="Alderen home">
                 <span class="brand-mark" aria-hidden="true">A</span>
-                <span class="brand-name">ALDEREN</span>
+                <span class="brand-name">Alderen</span>
             </a>
-
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="#problem">The problem</a>
-                <a href="#approach">Our approach</a>
-                <a href="#contact">Contact</a>
+                <a class="nav-link" href="#problem">The problem</a>
+                <a class="nav-link" href="#approach">How Ansel works</a>
+                <a class="nav-cta" href="#contact">Talk to us</a>
             </nav>
-
         </div>
     </header>
 
-
     <main>
-
-        <!-- Hero -->
         <section class="hero" id="home">
             <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>AI that carries engineering work from requirement to decision.</h1>
+                    <p class="hero-description">
+                        Alderen is building Ansel, an AI engineering system that coordinates simulation-driven design. Ansel combines intelligent agents with machine-learning models, including fast surrogate predictions, to streamline the journey from engineering requirements to verified results. Full simulation remains the final check, with engineers retaining control of the final decision.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Discuss your workflow</a>
+                        <a class="btn btn-ghost" href="#approach">See how Ansel works</a>
+                    </div>
+                    <p class="development-note">
+                        Early stage. We are building with a small group of working engineers.
+                    </p>
+                </div>
 
-                <p class="eyebrow">
-                    ENGINEERING INTELLIGENCE
-                </p>
+                <figure class="hero-visual">
+                    <svg viewBox="0 0 520 340" role="img" aria-label="Cantilever beam with stress contour bands, highest at the fixed end, and a flag recommending a full analysis there">
+                        <defs>
+                            <clipPath id="beam-clip"><rect x="58" y="130" width="412" height="80" rx="4"/></clipPath>
+                            <pattern id="mesh" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <path d="M20 0H0V20" fill="none" stroke="#14191e" stroke-opacity=".28" stroke-width="1"/>
+                            </pattern>
+                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="8" markerHeight="8" orient="auto">
+                                <path d="M0 0L5 10L10 0Z" fill="#a9b4bb"/>
+                            </marker>
+                        </defs>
 
-                <h1>
-                    Engineering workflows,
-                    <span>rethought.</span>
-                </h1>
+                        <rect class="panel" x="1" y="1" width="518" height="338" rx="10"/>
 
-                <p class="hero-description">
-                    Engineering teams rely on complex simulation workflows
-                    to make critical design decisions. Alderen is exploring
-                    how intelligent software can help make these workflows
-                    more efficient, accessible, and connected.
-                </p>
+                        <path class="wall" d="M40 112h18v116H40z"/>
+                        <path class="wall-hatch" d="M40 128l18-10M40 148l18-10M40 168l18-10M40 188l18-10M40 208l18-10M40 228l18-10"/>
 
-                <a class="hero-link" href="#approach">
-                    Explore our approach
-                    <span aria-hidden="true">↓</span>
-                </a>
+                        <g clip-path="url(#beam-clip)">
+                            <g class="bands">
+                                <rect style="--i:0" x="58"  y="130" width="52" height="80" fill="#d7263d"/>
+                                <rect style="--i:1" x="110" y="130" width="52" height="80" fill="#ef6a2a"/>
+                                <rect style="--i:2" x="162" y="130" width="52" height="80" fill="#f5a623"/>
+                                <rect style="--i:3" x="214" y="130" width="52" height="80" fill="#e8d33a"/>
+                                <rect style="--i:4" x="266" y="130" width="52" height="80" fill="#8fd14f"/>
+                                <rect style="--i:5" x="318" y="130" width="52" height="80" fill="#2fc9a0"/>
+                                <rect style="--i:6" x="370" y="130" width="52" height="80" fill="#2aa5d8"/>
+                                <rect style="--i:7" x="422" y="130" width="52" height="80" fill="#2f5bea"/>
+                            </g>
+                            <rect x="58" y="130" width="412" height="80" fill="url(#mesh)"/>
+                        </g>
 
-                <p class="development-note">
-                    An early-stage initiative focused on engineering
-                    workflow challenges.
-                </p>
+                        <line x1="470" y1="70" x2="470" y2="124" stroke="#a9b4bb" stroke-width="2" marker-end="url(#arrow)"/>
+                        <text class="svg-label" x="430" y="62">Load</text>
 
+                        <g class="flag">
+                            <path d="M84 126V84" stroke="#5fc4c8" stroke-width="1.5"/>
+                            <circle cx="84" cy="130" r="4" fill="#5fc4c8"/>
+                            <rect x="84" y="40" width="226" height="44" rx="6" fill="#20272d" stroke="#5fc4c8"/>
+                            <text class="svg-label" x="98" y="59">Fast prediction: low confidence</text>
+                            <text class="svg-label svg-muted" x="98" y="76">Run full analysis near the fixed end</text>
+                        </g>
+
+                        <text class="svg-label svg-muted" x="58" y="258">Lower stress</text>
+                        <text class="svg-label svg-muted" x="470" y="258" text-anchor="end">Higher stress</text>
+                        <rect x="58" y="270" width="52" height="8" fill="#2f5bea"/><rect x="110" y="270" width="52" height="8" fill="#2aa5d8"/><rect x="162" y="270" width="52" height="8" fill="#2fc9a0"/><rect x="214" y="270" width="52" height="8" fill="#8fd14f"/><rect x="266" y="270" width="52" height="8" fill="#e8d33a"/><rect x="318" y="270" width="52" height="8" fill="#f5a623"/><rect x="370" y="270" width="52" height="8" fill="#ef6a2a"/><rect x="422" y="270" width="48" height="8" fill="#d7263d"/>
+                    </svg>
+                    <figcaption>Illustration of the concept, not real results.</figcaption>
+                </figure>
             </div>
         </section>
 
-
-        <!-- Problem -->
         <section class="problem-section" id="problem">
             <div class="container problem-inner">
-
                 <div class="section-heading">
-                    <p class="eyebrow">01 / THE CHALLENGE</p>
-
-                    <h2>
-                        Better engineering decisions
-                        shouldn't mean unnecessary delays.
-                    </h2>
+                    <h2>Simulation shouldn't be the bottleneck in design.</h2>
+                    <p class="section-lead">
+                        Simulation is how engineers check a design before it is built, but the
+                        loop around it is slow. We are talking to engineers to learn exactly where.
+                    </p>
                 </div>
 
-                <div class="problem-content">
-
-                    <p>
-                        Simulation-driven engineering can involve
-                        demanding computational work, repeated
-                        iterations, and time-consuming analysis.
-                    </p>
-
-                    <div class="problem-divider"></div>
-
-                    <p>
-                        When a simulation produces an unexpected result,
-                        engineers may need to revisit assumptions,
-                        adjust designs, and run further analyses before
-                        moving forward.
-                    </p>
-
-                    <p class="problem-note">
-                        The opportunity is to understand where these
-                        workflows create friction — and where intelligent
-                        tools could help.
-                    </p>
-
-                </div>
-
+                <dl class="problem-list">
+                    <div>
+                        <dt>Setup takes longer than the thinking</dt>
+                        <dd>Turning a requirement into a simulation-ready model is hours of manual preparation.</dd>
+                    </div>
+                    <div>
+                        <dt>Every change means another full run</dt>
+                        <dd>Even small design changes can need a complete analysis to see what happened.</dd>
+                    </div>
+                    <div>
+                        <dt>Answers arrive after the decision</dt>
+                        <dd>When results come late, problems are found later and cost more to fix.</dd>
+                    </div>
+                </dl>
             </div>
         </section>
 
-
-        <!-- Approach -->
         <section class="approach-section" id="approach">
             <div class="container approach-inner">
-
                 <div class="section-heading">
-                    <p class="eyebrow">02 / OUR APPROACH</p>
-
-                    <h2>
-                        A more intelligent way
-                        to approach engineering work.
-                    </h2>
-
-                    <p class="approach-intro">
-                        Alderen is investigating an agentic engineering
-                        software platform designed to coordinate useful
-                        capabilities across simulation-driven workflows.
+                    <h2>One workflow, from request to verified result.</h2>
+                    <p class="section-lead">
+                        Ansel combines agents that coordinate the workflow with machine-learning
+                        models such as surrogates. Surrogate prediction is one capability within
+                        it, and full simulation remains the final check.
                     </p>
                 </div>
 
-                <div class="approach-grid">
-
-                    <article class="approach-item">
-                        <p class="approach-number">01</p>
-
-                        <h3>Intelligent orchestration</h3>
-
-                        <p>
-                            Explore how software agents could help
-                            coordinate stages of an engineering workflow,
-                            from preparing tasks to interpreting results.
-                        </p>
-                    </article>
-
-                    <article class="approach-item">
-                        <p class="approach-number">02</p>
-
-                        <h3>Simulation-aware tools</h3>
-
-                        <p>
-                            Investigate how engineering-specific tools
-                            could support analysis, reduce repetitive work,
-                            and help engineers navigate complex tasks.
-                        </p>
-                    </article>
-
-                    <article class="approach-item">
-                        <p class="approach-number">03</p>
-
-                        <h3>Surrogate modelling</h3>
-
-                        <p>
-                            Explore validated surrogate models as one
-                            potential capability for approximating
-                            simulation results where appropriate.
-                        </p>
-                    </article>
-
-                </div>
+                <ol class="steps">
+                    <li>
+                        <span class="step-number" aria-hidden="true">1</span>
+                        <h3>Ansel's agents help prepare the work</h3>
+                        <p>Describe the design and its requirements, and Ansel's agents help prepare the setup and coordinate the tools involved. Ansel's agents are being developed to automate parts of this preparation while keeping engineers in control of the assumptions.</p>
+                    </li>
+                    <li>
+                        <span class="step-number" aria-hidden="true">2</span>
+                        <h3>Surrogate models predict fast</h3>
+                        <p>Ansel's surrogate models will give rapid stress and deflection estimates for defined classes of parts. We are building the validation and confidence checks that show when an estimate can be trusted and when a full simulation is needed.</p>
+                    </li>
+                    <li>
+                        <span class="step-number" aria-hidden="true">3</span>
+                        <h3>Full analysis where it counts</h3>
+                        <p>Full simulation and engineering verification stay central to the workflow. When confidence is low or the stakes are high, the work goes to a full analysis, and final sign-off stays with the engineer.</p>
+                    </li>
+                </ol>
 
                 <p class="approach-note">
-                    These capabilities are areas of development and
-                    exploration, not claims of an already deployed product.
+                    Ansel is in development. It is not yet a deployed product.
                 </p>
-
             </div>
         </section>
 
-
-        <!-- Contact -->
         <section class="contact-section" id="contact">
             <div class="container contact-inner">
-
                 <div class="contact-copy">
-                    <p class="eyebrow">03 / START A CONVERSATION</p>
-
-                    <h2>
-                        Help shape the future
-                        of engineering workflows.
-                    </h2>
-
+                    <h2>Tell us how your simulation workflow runs today.</h2>
                     <p>
-                        We are exploring the challenges engineers face
-                        when working with simulation-driven design.
-                        If you work with engineering analysis, we would
-                        welcome a conversation about your workflow.
+                        If you run FEA, CFD, or other analysis as part of design work, we would
+                        like a short conversation about what slows you down. What you tell us
+                        shapes what we build first.
                     </p>
                 </div>
 
                 <div class="contact-action">
-
-                    <a
-                        class="contact-link"
-                        href="mailto:alderen.engineering@gmail.com?subject=Engineering%20workflow%20discussion"
-                    >
-                        Discuss your workflow
-                        <span aria-hidden="true">↗</span>
-                    </a>
-
-                    <div class="contact-details">
-
-                        <p class="contact-detail-label">EMAIL</p>
-
-                        <a href="mailto:alderen.engineering@gmail.com">
-                            alderen.engineering@gmail.com
-                        </a>
-
-                        <p class="contact-detail-label">PHONE</p>
-
-                        <a href="tel:+27680624296">
-                            +27 68 062 4296
-                        </a>
-
-                    </div>
-
-                    <p class="contact-stage">
-                        Early-stage project · Currently exploring the problem
-                    </p>
-
+                    <a class="btn btn-primary" href="mailto:alderen.engineering@gmail.com?subject=Engineering%20workflow%20discussion">Email us about your workflow</a>
+                    <p class="contact-email">alderen.engineering@gmail.com</p>
                 </div>
-
             </div>
         </section>
-
     </main>
 
-
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-inner">
-
             <a class="brand footer-brand" href="#home">
                 <span class="brand-mark" aria-hidden="true">A</span>
-                <span class="brand-name">ALDEREN</span>
+                <span class="brand-name">Alderen</span>
             </a>
-
-            <p>
-                Engineering intelligence, thoughtfully applied.
-            </p>
-
-            <p class="footer-copyright">
-                &copy; <span id="current-year">2026</span> Alderen
-            </p>
-
+            <p>Engineering intelligence, thoughtfully applied.</p>
+            <p class="footer-copyright">&copy; <span id="current-year">2026</span> Alderen</p>
         </div>
     </footer>
-
 </body>
 </html>
