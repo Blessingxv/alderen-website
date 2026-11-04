@@ -1,4 +1,8 @@
-const year = document.getElementById("current-year");
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const yearElement = document.getElementById("current-year");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
