@@ -4,19 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Alderen is building Ansel, an agentic engineering platform that combines intelligent agents and machine-learning models to coordinate simulation-driven design and support verified engineering decisions.">
-
+    <meta name="description" content="Alderen is building Ansel, agentic engineering software for FEA and CFD workflows, connecting simulation preparation, solver execution, machine learning and engineering verification.">
     <meta name="theme-color" content="#14191E">
 
-    <title>Alderen | Ansel — Engineering Intelligence</title>
+    <title>Alderen | Ansel: Agentic Engineering Software</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="static/css/styles.css">
     <script src="static/js/main.js" defer></script>
+
+    <style>
+        /* Text readability */
+
+        .hero-description,
+        .section-lead,
+        .problem-list dd,
+        .steps p,
+        .contact-copy p,
+        .development-note,
+        .approach-note,
+        .about-copy p,
+        .team-member p {
+            text-align: left;
+            hyphens: none;
+            -webkit-hyphens: none;
+            word-break: normal;
+            overflow-wrap: break-word;
+        }
+
+        /* About and team */
+
+        .about-section {
+            padding: 100px 0;
+            background: #171e23;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .about-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .about-intro {
+            max-width: 850px;
+            margin-bottom: 58px;
+        }
+
+        .about-intro h2 {
+            margin-bottom: 22px;
+        }
+
+        .about-copy p {
+            color: #b7c2c8;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            max-width: 800px;
+        }
+
+        .team-heading {
+            margin-bottom: 25px;
+        }
+
+        .team-heading h3 {
+            font-family: "Barlow Semi Condensed", sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 600;
+            color: #f2f5f5;
+            margin: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .team-member {
+            padding: 30px;
+            background: #20282e;
+            border: 1px solid rgba(155,185,193,0.15);
+            border-radius: 8px;
+            transition: border-color 0.25s ease,
+                        transform 0.25s ease;
+        }
+
+        .team-member:hover {
+            border-color: rgba(95,196,200,0.48);
+            transform: translateY(-3px);
+        }
+
+        .team-member h4 {
+            font-family: "Barlow Semi Condensed", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #f2f5f5;
+            margin: 0 0 6px;
+        }
+
+        .team-role {
+            display: block;
+            color: #5fc4c8;
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            margin-bottom: 20px;
+        }
+
+        .team-member p {
+            color: #b7c2c8;
+            line-height: 1.75;
+            margin: 0 0 16px;
+        }
+
+        .team-member p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .team-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 22px;
+            color: #5fc4c8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .team-link:hover {
+            color: #a0edf0;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 70px 0;
+            }
+
+            .about-intro {
+                margin-bottom: 40px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-member {
+                padding: 24px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,6 +179,7 @@
             <nav class="main-nav" aria-label="Main navigation">
                 <a class="nav-link" href="#problem">The problem</a>
                 <a class="nav-link" href="#approach">How Ansel works</a>
+                <a class="nav-link" href="#about">About &amp; Team</a>
                 <a class="nav-cta" href="#contact">Talk to us</a>
             </nav>
 
@@ -42,29 +188,20 @@
 
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
 
         <section class="hero" id="home">
             <div class="container hero-inner">
 
                 <div class="hero-copy">
 
-                    <h1>
-                        AI that carries engineering work from requirement to decision.
-                    </h1>
+                    <h1>From simulation setup to results engineers can check.</h1>
 
                     <p class="hero-description">
-                        Alderen is building Ansel, an agentic engineering platform
-                        that connects the steps of simulation-driven design.
-                        Ansel combines intelligent agents with machine-learning
-                        models, including fast surrogate predictions, to simplify
-                        analysis workflows, accelerate design iterations, and
-                        support verified engineering decisions. Engineers remain
-                        in control of the assumptions, verification, and final decisions.
+                        Alderen is building Ansel, an agentic engineering SaaS platform for FEA and CFD. Ansel is designed to connect simulation preparation, solver runs, machine-learning predictions and result checks in one workflow. The aim is to reduce repetitive work while keeping engineers in control of critical decisions.
                     </p>
 
                     <div class="hero-actions">
-
                         <a class="btn btn-primary" href="#contact">
                             Discuss your workflow
                         </a>
@@ -72,179 +209,163 @@
                         <a class="btn btn-ghost" href="#approach">
                             See how Ansel works
                         </a>
-
                     </div>
 
                     <p class="development-note">
-                        Early stage. We are speaking with engineers to shape
-                        what we build first.
+                        Early stage. We are working with engineers to define and test the first workflows.
                     </p>
 
                 </div>
 
-                <!-- ENGINEERING ILLUSTRATION -->
+                <!-- ANIMATED ENGINEERING ILLUSTRATION -->
 
                 <figure class="hero-visual">
-
-                    <svg viewBox="0 0 520 340"
-                         role="img"
-                         aria-label="Conceptual cantilever beam under a downward load, showing higher stress near the fixed support and a verification indicator">
+                    <svg
+                        viewBox="0 0 520 340"
+                        role="img"
+                        aria-label="Conceptual cantilever beam under a downward end load, with higher stress near the fixed support"
+                    >
 
                         <defs>
-
                             <clipPath id="beam-clip">
-                                <rect x="58" y="130"
-                                      width="412" height="80"
-                                      rx="4"/>
+                                <rect x="58" y="130" width="412" height="80" rx="4"/>
                             </clipPath>
 
-                            <pattern id="mesh"
-                                     width="20"
-                                     height="20"
-                                     patternUnits="userSpaceOnUse">
-
-                                <path d="M20 0H0V20"
-                                      fill="none"
-                                      stroke="#14191e"
-                                      stroke-opacity=".28"
-                                      stroke-width="1"/>
+                            <pattern
+                                id="mesh"
+                                width="20"
+                                height="20"
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path
+                                    d="M20 0H0V20"
+                                    fill="none"
+                                    stroke="#14191e"
+                                    stroke-opacity=".28"
+                                    stroke-width="1"
+                                />
                             </pattern>
-
-                            <marker id="arrow"
-                                    viewBox="0 0 10 10"
-                                    refX="5"
-                                    refY="9"
-                                    markerWidth="8"
-                                    markerHeight="8"
-                                    orient="auto">
-
-                                <path d="M0 0L5 10L10 0Z"
-                                      fill="#a9b4bb"/>
-                            </marker>
-
                         </defs>
 
-                        <!-- Illustration panel -->
+                        <rect
+                            class="panel"
+                            x="1"
+                            y="1"
+                            width="518"
+                            height="338"
+                            rx="10"
+                        />
 
-                        <rect class="panel"
-                              x="1" y="1"
-                              width="518" height="338"
-                              rx="10"/>
+                        <path
+                            class="wall"
+                            d="M40 112h18v116H40z"
+                        />
 
-                        <!-- Fixed support -->
-
-                        <path class="wall" d="M40 112h18v116H40z"/>
-
-                        <path class="wall-hatch"
-                              d="M40 128l18-10
-                                 M40 148l18-10
-                                 M40 168l18-10
-                                 M40 188l18-10
-                                 M40 208l18-10
-                                 M40 228l18-10"/>
-
-                        <!-- Stress contour illustration -->
+                        <path
+                            class="wall-hatch"
+                            d="M40 128l18-10M40 148l18-10M40 168l18-10M40 188l18-10M40 208l18-10M40 228l18-10"
+                        />
 
                         <g clip-path="url(#beam-clip)">
-
                             <g class="bands">
-
-                                <rect style="--i:0" x="58" y="130"
-                                      width="52" height="80"
-                                      fill="#d7263d"/>
-
-                                <rect style="--i:1" x="110" y="130"
-                                      width="52" height="80"
-                                      fill="#ef6a2a"/>
-
-                                <rect style="--i:2" x="162" y="130"
-                                      width="52" height="80"
-                                      fill="#f5a623"/>
-
-                                <rect style="--i:3" x="214" y="130"
-                                      width="52" height="80"
-                                      fill="#e8d33a"/>
-
-                                <rect style="--i:4" x="266" y="130"
-                                      width="52" height="80"
-                                      fill="#8fd14f"/>
-
-                                <rect style="--i:5" x="318" y="130"
-                                      width="52" height="80"
-                                      fill="#2fc9a0"/>
-
-                                <rect style="--i:6" x="370" y="130"
-                                      width="52" height="80"
-                                      fill="#2aa5d8"/>
-
-                                <rect style="--i:7" x="422" y="130"
-                                      width="52" height="80"
-                                      fill="#2f5bea"/>
-
+                                <rect style="--i:0" x="58" y="130" width="52" height="80" fill="#d7263d"/>
+                                <rect style="--i:1" x="110" y="130" width="52" height="80" fill="#ef6a2a"/>
+                                <rect style="--i:2" x="162" y="130" width="52" height="80" fill="#f5a623"/>
+                                <rect style="--i:3" x="214" y="130" width="52" height="80" fill="#e8d33a"/>
+                                <rect style="--i:4" x="266" y="130" width="52" height="80" fill="#8fd14f"/>
+                                <rect style="--i:5" x="318" y="130" width="52" height="80" fill="#2fc9a0"/>
+                                <rect style="--i:6" x="370" y="130" width="52" height="80" fill="#2aa5d8"/>
+                                <rect style="--i:7" x="422" y="130" width="52" height="80" fill="#2f5bea"/>
                             </g>
 
-                            <rect x="58" y="130"
-                                  width="412" height="80"
-                                  fill="url(#mesh)"/>
-
+                            <rect
+                                x="58"
+                                y="130"
+                                width="412"
+                                height="80"
+                                fill="url(#mesh)"
+                            />
                         </g>
 
-                        <!-- Applied load -->
+                        <!-- DOWNWARD LOAD ARROW -->
 
-                        <line x1="470" y1="70"
-                              x2="470" y2="124"
-                              stroke="#a9b4bb"
-                              stroke-width="2"
-                              marker-end="url(#arrow)"/>
+                        <line
+                            x1="470"
+                            y1="70"
+                            x2="470"
+                            y2="124"
+                            stroke="#a9b4bb"
+                            stroke-width="2"
+                        />
 
-                        <text class="svg-label"
-                              x="430" y="62">
+                        <path
+                            d="M463 114L470 126L477 114Z"
+                            fill="#a9b4bb"
+                        />
+
+                        <text
+                            class="svg-label"
+                            x="430"
+                            y="62"
+                        >
                             Load
                         </text>
 
-                        <!-- Verification indicator -->
+                        <!-- VERIFICATION FLAG -->
 
                         <g class="flag">
 
-                            <path d="M84 126V84"
-                                  stroke="#5fc4c8"
-                                  stroke-width="1.5"/>
+                            <path
+                                d="M84 126V84"
+                                stroke="#5fc4c8"
+                                stroke-width="1.5"
+                            />
 
-                            <circle cx="84" cy="130"
-                                    r="4"
-                                    fill="#5fc4c8"/>
+                            <circle
+                                cx="84"
+                                cy="130"
+                                r="4"
+                                fill="#5fc4c8"
+                            />
 
-                            <rect x="84" y="40"
-                                  width="254"
-                                  height="44"
-                                  rx="6"
-                                  fill="#20272d"
-                                  stroke="#5fc4c8"/>
+                            <rect
+                                x="84"
+                                y="40"
+                                width="226"
+                                height="44"
+                                rx="6"
+                                fill="#20272d"
+                                stroke="#5fc4c8"
+                            />
 
-                            <text class="svg-label"
-                                  x="98" y="59">
+                            <text class="svg-label" x="98" y="59">
                                 Surrogate estimate: review needed
                             </text>
 
-                            <text class="svg-label svg-muted"
-                                  x="98" y="76">
+                            <text class="svg-label svg-muted" x="98" y="76">
                                 Verify with full analysis
                             </text>
 
                         </g>
 
-                        <!-- Stress legend -->
-
-                        <text class="svg-label svg-muted"
-                              x="58" y="258">
+                        <text
+                            class="svg-label svg-muted"
+                            x="58"
+                            y="258"
+                        >
                             Higher stress
                         </text>
 
-                        <text class="svg-label svg-muted"
-                              x="470" y="258"
-                              text-anchor="end">
+                        <text
+                            class="svg-label svg-muted"
+                            x="470"
+                            y="258"
+                            text-anchor="end"
+                        >
                             Lower stress
                         </text>
+
+                        <!-- STRESS LEGEND -->
 
                         <rect x="58" y="270" width="52" height="8" fill="#d7263d"/>
                         <rect x="110" y="270" width="52" height="8" fill="#ef6a2a"/>
@@ -260,81 +381,48 @@
                     <figcaption>
                         Illustration of the concept, not real results.
                     </figcaption>
-
                 </figure>
 
             </div>
         </section>
 
-        <!-- PROBLEM SECTION -->
+        <!-- THE PROBLEM -->
 
         <section class="problem-section" id="problem">
             <div class="container problem-inner">
 
                 <div class="section-heading">
-
-                    <h2>
-                        Engineering progress depends on more than running a simulation.
-                    </h2>
+                    <h2>The solver is only part of the work.</h2>
 
                     <p class="section-lead">
-                        Engineering analysis involves repeated cycles of
-                        preparation, simulation, interpretation, and revision.
-                        Disconnected tools and manual tasks can slow down the
-                        process, even when the underlying engineering problem
-                        is understood.
+                        A simulation can take minutes or hours to run, but getting it ready and checking the result often takes much more effort. Engineers still have to prepare models, deal with failed runs and repeat studies as designs change.
                     </p>
-
                 </div>
 
                 <dl class="problem-list">
 
                     <div>
-
-                        <dt>
-                            Preparing the analysis takes time
-                        </dt>
-
+                        <dt>Getting a model ready takes time</dt>
                         <dd>
-                            Translating design requirements into
-                            simulation-ready models involves geometry,
-                            materials, loading conditions, and
-                            boundary conditions.
+                            CAD cleanup, meshing, material properties and boundary conditions all need attention before the first solver run.
                         </dd>
-
                     </div>
 
                     <div>
-
-                        <dt>
-                            Every iteration adds work
-                        </dt>
-
+                        <dt>Every design change adds another run</dt>
                         <dd>
-                            Design changes and alternative loading
-                            scenarios require engineers to revisit
-                            earlier steps, rerun analyses, and
-                            compare results.
+                            A change in geometry, loading or operating conditions can mean preparing another case, running the solver again and comparing outputs.
                         </dd>
-
                     </div>
 
                     <div>
-
-                        <dt>
-                            Results need engineering context
-                        </dt>
-
+                        <dt>A result is not the same as an answer</dt>
                         <dd>
-                            Simulation outputs must be interpreted,
-                            checked against requirements, and verified
-                            before they inform design decisions.
+                            Convergence, assumptions, model validity and unexpected behaviour still need to be checked before anyone can rely on the result.
                         </dd>
-
                     </div>
 
                 </dl>
-
             </div>
         </section>
 
@@ -344,119 +432,181 @@
             <div class="container approach-inner">
 
                 <div class="section-heading">
-
-                    <h2>
-                        One workflow, from requirement to verified result.
-                    </h2>
+                    <h2>Ansel connects the work around the simulation.</h2>
 
                     <p class="section-lead">
-                        Ansel brings intelligent agents, engineering tools,
-                        and machine-learning models into a connected workflow.
-                        Surrogate predictions provide a faster analysis option
-                        where appropriate, while conventional simulation
-                        and engineering verification remain central.
+                        Ansel is designed to use agents to coordinate defined engineering tasks, conventional solvers to run the physics and ML surrogate models to assess repeat cases faster once validated for a defined range. Each tool has a specific role, with clear limits and engineer review.
                     </p>
-
                 </div>
 
                 <ol class="steps">
 
-                    <!-- STEP 1 -->
-
                     <li>
+                        <span class="step-number" aria-hidden="true">1</span>
 
-                        <span class="step-number" aria-hidden="true">
-                            1
-                        </span>
-
-                        <h3>
-                            Intelligent agents coordinate the workflow
-                        </h3>
+                        <h3>Prepare the simulation</h3>
 
                         <p>
-                            Ansel connects engineering requirements,
-                            analysis preparation, and simulation tools,
-                            reducing the manual work between engineering
-                            tasks.
+                            Start with the geometry, loads, material or fluid properties and the intended checks. Ansel is designed to organise the setup steps, assist with inputs and flag assumptions that need an engineer to confirm.
                         </p>
-
                     </li>
 
-                    <!-- STEP 2 -->
-
                     <li>
+                        <span class="step-number" aria-hidden="true">2</span>
 
-                        <span class="step-number" aria-hidden="true">
-                            2
-                        </span>
-
-                        <h3>
-                            Machine-learning models accelerate analysis
-                        </h3>
+                        <h3>Run the solver or a validated model</h3>
 
                         <p>
-                            Surrogate models provide rapid estimates
-                            for supported engineering problems,
-                            helping engineers explore design alternatives
-                            before committing to more expensive simulations.
+                            For structural and internal-flow cases, the workflow is designed to connect to FEA and CFD solvers. Once trained and tested for a defined range, PyTorch surrogate models can screen repeat design variants. Cases outside that range go back to full analysis.
                         </p>
-
                     </li>
 
-                    <!-- STEP 3 -->
-
                     <li>
+                        <span class="step-number" aria-hidden="true">3</span>
 
-                        <span class="step-number" aria-hidden="true">
-                            3
-                        </span>
-
-                        <h3>
-                            Engineering verification stays central
-                        </h3>
+                        <h3>Check the evidence</h3>
 
                         <p>
-                            Full simulations and engineering checks
-                            validate results where necessary, with
-                            engineers retaining responsibility for
-                            final decisions.
+                            Keep a record of the inputs, assumptions, solver outputs and model limits. Ansel is designed to help flag convergence problems or results that need another run. The engineer reviews and approves the final result.
                         </p>
-
                     </li>
 
                 </ol>
 
                 <p class="approach-note">
-                    Ansel is in development. It is not yet a deployed product.
+                    Ansel is in development. The first release focuses on bounded structural FEA and internal-flow CFD cases.
                 </p>
 
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
+        <!-- ABOUT AND TEAM -->
+
+        <section class="about-section" id="about">
+            <div class="container about-inner">
+
+                <div class="about-intro">
+
+                    <div class="section-heading">
+                        <h2>Built by engineers who understand the work.</h2>
+                    </div>
+
+                    <div class="about-copy">
+
+                        <p>
+                            Alderen is an early-stage engineering software company founded by two mechanical engineers from the University of Johannesburg. Our backgrounds span mechanical design, finite element analysis, computational fluid dynamics, programming and machine learning.
+                        </p>
+
+                        <p>
+                            We have worked with engineering analysis tools and understand how much effort goes into preparing a model, checking assumptions and interpreting results. We started Alderen to develop software that handles more of the repetitive work while leaving engineers in control of the analysis.
+                        </p>
+
+                        <p>
+                            Our current focus is Ansel, an agentic platform for structural FEA and internal-flow CFD workflows. We are building it alongside customer discovery with engineers working on real simulation problems.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="team-heading">
+                    <h3>The founding team</h3>
+                </div>
+
+                <div class="team-grid">
+
+                    <!-- FOUNDER AND CEO -->
+
+                    <article class="team-member">
+
+                        <h4>Tlangelani Mhlongo</h4>
+
+                        <span class="team-role">
+                            Founder &amp; CEO
+                        </span>
+
+                        <p>
+                            Tlangelani holds a BEng Tech in Mechanical Engineering from the University of Johannesburg. His engineering project experience includes CFD analysis of an airfoil, mechanical design, structural analysis and stress and thermal FEA.
+                        </p>
+
+                        <p>
+                            He has since expanded into software development and machine learning, building Python applications using FastAPI, PostgreSQL and PyTorch. His work includes a job distribution system and a predictive-maintenance model developed using NASA turbofan data.
+                        </p>
+
+                        <p>
+                            At Alderen, he leads product development, AI/ML research and the software architecture behind Ansel.
+                        </p>
+
+                        <a
+                            class="team-link"
+                            href="https://www.linkedin.com/in/blessing-mhlongo/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Tlangelani Mhlongo LinkedIn profile"
+                        >
+                            LinkedIn profile
+                        </a>
+
+                    </article>
+
+                    <!-- CO-FOUNDER AND CTO -->
+
+                    <article class="team-member">
+
+                        <h4>Muneiwa Rampamba</h4>
+
+                        <span class="team-role">
+                            Co-founder &amp; CTO
+                        </span>
+
+                        <p>
+                            Muneiwa holds a BEng Tech in Mechanical Engineering from the University of Johannesburg and is completing her Honours degree. Her background includes CAD, CFD, mechanical systems analysis and engineering design.
+                        </p>
+
+                        <p>
+                            Her project experience includes the design and analysis of a 14-stage axial compressor and two-stage turbine, along with work on improving an industrial oil separation system. She has experience with ANSYS, STAR-CCM+, Autodesk Inventor and MATLAB.
+                        </p>
+
+                        <p>
+                            At Alderen, she focuses on engineering research, simulation workflows and technical development, working across the engineering and software sides of Ansel.
+                        </p>
+
+                        <a
+                            class="team-link"
+                            href="https://www.linkedin.com/in/muneiwa-rampamba-138749312/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Muneiwa Rampamba LinkedIn profile"
+                        >
+                            LinkedIn profile
+                        </a>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
 
         <section class="contact-section" id="contact">
             <div class="container contact-inner">
 
                 <div class="contact-copy">
 
-                    <h2>
-                        Tell us how your engineering workflow runs today.
-                    </h2>
+                    <h2>Work with FEA or CFD? We would like to hear from you.</h2>
 
                     <p>
-                        If you work with FEA, CFD, or other engineering
-                        analysis tools, we'd like to understand where time
-                        and effort are lost in your workflow. Your
-                        experience helps shape what we build first.
+                        We are talking to engineers about simulation setup, meshing, repeated runs and checking results. If you have dealt with these problems on a real project, we would value a short conversation.
                     </p>
 
                 </div>
 
                 <div class="contact-action">
 
-                    <a class="btn btn-primary"
-                       href="mailto:alderen.engineering@gmail.com?subject=Engineering%20workflow%20discussion">
+                    <a
+                        class="btn btn-primary"
+                        href="mailto:alderen.engineering@gmail.com?subject=Engineering%20workflow%20discussion"
+                    >
                         Email us about your workflow
                     </a>
 
@@ -465,7 +615,6 @@
                     </p>
 
                 </div>
-
             </div>
         </section>
 
@@ -474,33 +623,20 @@
     <!-- FOOTER -->
 
     <footer class="site-footer">
-
         <div class="container footer-inner">
 
-            <a class="brand footer-brand"
-               href="#home"
-               aria-label="Alderen home">
-
-                <span class="brand-mark" aria-hidden="true">
-                    A
-                </span>
-
-                <span class="brand-name">
-                    Alderen
-                </span>
-
+            <a class="brand footer-brand" href="#home">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span class="brand-name">Alderen</span>
             </a>
 
-            <p>
-                Engineering intelligence, thoughtfully applied.
-            </p>
+            <p>Engineering intelligence, thoughtfully applied.</p>
 
             <p class="footer-copyright">
                 &copy; <span id="current-year">2026</span> Alderen
             </p>
 
         </div>
-
     </footer>
 
 </body>
